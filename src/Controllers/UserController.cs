@@ -3,7 +3,7 @@ using CRUD_Users.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace CRUD_Users.WebApp.Controllers
+namespace CRUD_Users.Vue.WebApp.Controllers
 {
     public class UserController : Controller
     {
