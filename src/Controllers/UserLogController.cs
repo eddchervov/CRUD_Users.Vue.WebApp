@@ -14,7 +14,7 @@ namespace CRUD_Users.Vue.WebApp.Controllers
             _userLogRemoteCallService = userLogRemoteCallService;
         }
 
-        [HttpPost]
+        [HttpPost("user-log/get")]
         public async Task<IActionResult> GetAsync([FromBody]GetUserLogRequest request)
         {
             var response = await _userLogRemoteCallService.GetAsync(request);

@@ -20,7 +20,7 @@ namespace CRUD_Users.Vue.WebApp.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("users/get")]
         public async Task<IActionResult> GetAsync([FromBody]GetUsersRequest request)
         {
             var response = await _userRemoteCallService.GetAsync(request);
@@ -28,7 +28,7 @@ namespace CRUD_Users.Vue.WebApp.Controllers
             return Json(response);
         }
 
-        [HttpPost]
+        [HttpPost("users/create")]
         public async Task<IActionResult> CreateAsync([FromBody]CreateUserRequest request)
         {
             var response = await _userRemoteCallService.CreateAsync(request);
@@ -36,7 +36,7 @@ namespace CRUD_Users.Vue.WebApp.Controllers
             return Json(response);
         }
 
-        [HttpPost]
+        [HttpPost("users/update")]
         public async Task<IActionResult> UpdateAsync([FromBody]UpdateUserRequest request)
         {
             var response = await _userRemoteCallService.UpdateAsync(request);
